@@ -37,7 +37,7 @@ cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
 # cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
 with mp_face_detection.FaceDetection(
-    model_selection=0, min_detection_confidence=0.7) as face_detection:
+    model_selection=0, min_detection_confidence=0.8) as face_detection:
   while cap.isOpened():
     success, image = cap.read()
     #x,y,_ = image.shape
