@@ -8,7 +8,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
     if msg.topic == "start":
-      os.system("/home/pi/robot_szem/start.sh")
+      os.system("bash /home/pi/robot_szem/start_left.sh")
 
 client = mqtt.Client()
 client.on_connect = on_connect
